@@ -33,3 +33,12 @@
     background: -webkit-linear-gradient(313deg, rgba(206,56,133,1) 0%, rgba(16,157,191,1) 100%);
     background: linear-gradient(313deg, rgba(206,56,133,1) 0%, rgba(16,157,191,1) 100%);
 }
+/* .dark-mode-text-is-active {
+    color: ;
+} */
+.dark-mode-background-is-active {
+    background: rgb(24,24,24) !important;
+}
+.dark-mode-is-active-offset {
+    background: rgb(48, 48, 48) !important;
+}

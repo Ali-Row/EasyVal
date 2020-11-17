@@ -1,6 +1,7 @@
-const profileButton = document.querySelector(".profile");
-const helpButton = document.querySelector(".question");
-const deleteButtonModal = document.querySelector(".delete");
+const profileButton = document.querySelector(".profile-button");
+const infoButton = document.querySelector(".info-button");
+const darkModeButton = document.querySelector(".dark-mode-button");
+const closeModalButton = document.querySelector(".close-button");
 const modal = document.querySelector(".modal");
 const alertModal = document.querySelector(".alert-modal");
 const closeAlertModalButton = document.querySelector(".close-alert-modal-button");
@@ -122,13 +123,35 @@ const fillOutForm = () => {
     openEvalFormButton.href = `https://docs.google.com/forms/d/e/1FAIpQLSdb4ejjbqoqKO-Q4k7zeO_xwykwB0dxYLWYm1mX5Ik45MzEeg/viewform${studentInfo}`
 }
 
+const toggleDarkMode = () => {
+    const html = document.querySelector('html');
+    const navbar = document.querySelector('.navbar');
+    const button = document.querySelectorAll('.button');
+    const input = document.querySelectorAll('.input');
+    const modalHeader = document.querySelectorAll('.modal-card-head');
+    const modalBody = document.querySelectorAll('.modal-card-body');
+    const modalFooter = document.querySelectorAll('.modal-card-foot');
+    const footer = document.querySelector('.footer');
+
+
+    html.classList.toggle('dark-mode-background-is-active');
+    navbar.classList.toggle('dark-mode-background-is-active');
+    footer.classList.toggle('dark-mode-background-is-active');
+    button.forEach(x=>x.classList.toggle('dark-mode-is-active-offset'));
+    input.forEach(x=>x.classList.toggle('dark-mode-is-active-offset'));
+    modalHeader.forEach(x=>x.classList.toggle('dark-mode-is-active-offset'));
+    modalBody.forEach(x=>x.classList.toggle('dark-mode-is-active-offset'));
+    modalFooter.forEach(x=>x.classList.toggle('dark-mode-is-active-offset'));
+
+}
+
 // If there is data in localStorage generate the eval page else show the home screen.
 readFromLocalStorage() ? generateEvalPage() : showHomeScreen();
 
 profileButton.addEventListener("click", () => {
     readFromLocalStorage() ? showModal() : showAlertModal();
 });
-deleteButtonModal.addEventListener("click", hideModal);
+closeModalButton.addEventListener("click", hideModal);
 
 saveStudentButton.addEventListener("click", () => {
     getStudentInfo();
@@ -177,3 +200,4 @@ updateInfo.addEventListener("click", () => {
 
 openEvalFormButton.addEventListener("click", fillOutForm);
 closeAlertModalButton.addEventListener("click", hideAlertModal);
+darkModeButton.addEventListener("click", toggleDarkMode);
