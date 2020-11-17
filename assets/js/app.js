@@ -13,14 +13,14 @@ const courseTypeButton = document.querySelectorAll("#courseTypeButton");
 
 const showModal = () => {
     modal.classList.add("is-active");
-    const modalName = document.querySelector(".modal-name");
+    const modalFullName = document.querySelector(".modal-full-name");
     const modalEmail = document.querySelector(".modal-email");
     const modalClasscode = document.querySelector(".modal-classcode");
     const modalCourseType = document.querySelector(".modal-course-type");
     const modalTutorName = document.querySelector(".modal-tutor-name");
 
 
-    modalName.textContent = "Name: " + readFromLocalStorage().name;
+    modalFullName.textContent = "Full Name: " + readFromLocalStorage().fullName;
     modalEmail.textContent = "Email: " + readFromLocalStorage().email;
     modalClasscode.textContent = "Classcode: " + readFromLocalStorage().classcode;
     modalCourseType.textContent = "Course Type: " + readFromLocalStorage().courseType;
@@ -55,7 +55,7 @@ const generateEvalPage = () => {
     }
 
     const welcomeMessage = document.querySelector('.welcome-message');
-    const firstName = readFromLocalStorage().name.split(' ')[0];
+    const firstName = readFromLocalStorage().fullName.split(' ')[0];
     welcomeMessage.textContent = `👋 Welcome back, ${firstName}!`
 };
 
@@ -67,19 +67,19 @@ const showHomeScreen = () => {
 };
 
 const getStudentInfo = () => {
-    const name = document.querySelector(".name").value.trim();
+    const fullName = document.querySelector(".full-name").value.trim();
     const email = document.querySelector(".email").value.trim();
     const classcode = document.querySelector(".classcode").value.trim();
     const courseType = document.querySelector(".course-type").value.trim();
     const tutorName = document.querySelector(".tutor-name").value.trim();
 
-    const studentObject = new GenerateStudentObject(name, email, classcode, courseType, tutorName);
+    const studentObject = new GenerateStudentObject(fullName, email, classcode, courseType, tutorName);
     saveToLocalStorage(studentObject);
 };
 
 class GenerateStudentObject {
-    constructor(name, email, classcode, courseType, tutorName) {
-        this.name = name;
+    constructor(fullName, email, classcode, courseType, tutorName) {
+        this.fullName = fullName;
         this.email = email;
         this.classcode = classcode;
         this.courseType = courseType;
@@ -89,7 +89,7 @@ class GenerateStudentObject {
 
 const fillOutForm = () => {
 
-    const fullName = readFromLocalStorage().name
+    const fullName = readFromLocalStorage().fullName
     const email = readFromLocalStorage().email
     const classcode = readFromLocalStorage().classcode
     const courseType = "FSF - Full Stack Flex Web Development(Javascript)";
@@ -124,13 +124,13 @@ deleteInfo.addEventListener("click", () => {
 updateInfo.addEventListener("click", () => {
     showHomeScreen();
     hideModal();
-    const name = document.querySelector(".name");
+    const fullName = document.querySelector(".full-name");
     const email = document.querySelector(".email");
     const classcode = document.querySelector(".classcode");
     const courseType = document.querySelector(".course-type");
     const tutorName = document.querySelector(".tutor-name");
 
-    name.value = readFromLocalStorage().name;
+    fullName.value = readFromLocalStorage().fullName;
     email.value = readFromLocalStorage().email;
     classcode.value = readFromLocalStorage().classcode;
     courseType.value = readFromLocalStorage().courseType;
