@@ -6,3 +6,7 @@
     border-top: double black 9px;
     border-bottom: dotted black 5px;
 }
+
+.border {
+    border: solid rgb(0, 238, 255) 2px;
+}

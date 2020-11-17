@@ -7,6 +7,8 @@ const deleteInfo = document.querySelector(".delete-info");
 const saveStudentButton = document.querySelector(".save");
 const inputFields = document.querySelector(".input-fields");
 const evalPage = document.querySelector(".eval");
+const openEvalFormButton = document.querySelector(".open-eval-form");
+
 
 const showModal = () => {
     modal.classList.add("is-active");
@@ -44,6 +46,10 @@ const generateEvalPage = () => {
         inputFields.style.display = "none";
         evalPage.style.display = "block";
     }
+
+    const welcomeMessage = document.querySelector('.welcome-message');
+    const firstName = readFromLocalStorage().name.split(' ')[0];
+    welcomeMessage.textContent = `👋 Welcome back, ${firstName}!`
 };
 
 const showHomeScreen = () => {
@@ -69,6 +75,14 @@ class GenerateStudentObject {
     }
 }
 
+const fillOutForm = () => {
+    const name = readFromLocalStorage().name
+    const email = readFromLocalStorage().email
+    const classcode = readFromLocalStorage().classcode
+    // openEvalFormButton.href = `https://docs.google.com/forms/d/e/1FAIpQLSc_q0CSp5Bpn7lfDAdoPCbBTW-OxWQVhC3gG5P9e6iE4FERjw/viewform?&entry.1626809215=${classcode}&entry.1262798942=${name}&entry.1509111758=${email}&entry.737967299=Alistair%20Rowden`
+    openEvalFormButton.href = `eval form link goes here!!`
+}
+
 // If there is data in localStorage generate the eval page else show the home screen.
 readFromLocalStorage() ? generateEvalPage() : showHomeScreen();
 
@@ -89,3 +103,4 @@ updateInfo.addEventListener("click", () => {
     showHomeScreen();
     hideModal();
 });
+openEvalFormButton.addEventListener("click", fillOutForm)
