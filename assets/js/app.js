@@ -8,6 +8,7 @@ const saveStudentButton = document.querySelector(".save");
 const inputFields = document.querySelector(".input-fields");
 const evalPage = document.querySelector(".eval");
 const openEvalFormButton = document.querySelector(".open-eval-form");
+const courseTypeButton = document.querySelectorAll("#courseTypeButton");
 
 
 const showModal = () => {
@@ -71,6 +72,7 @@ const getStudentInfo = () => {
     const classcode = document.querySelector(".classcode").value.trim();
     const courseType = document.querySelector(".course-type").value.trim();
     const tutorName = document.querySelector(".tutor-name").value.trim();
+
     const studentObject = new GenerateStudentObject(name, email, classcode, courseType, tutorName);
     saveToLocalStorage(studentObject);
 };
