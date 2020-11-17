@@ -12,6 +12,24 @@
 .shadow-sm {
     box-shadow: 1px 1px 6px #4848481c !important;
 }
+.shadow-lg {
+    box-shadow: 1px 4px 9px #48484894 !important;
+}
 .is-primary, .has-background-primary {
-    background: #54addd !important;
+    background: rgb(16, 147, 180) !important;
+}
+.is-primary:hover {
+    background: rgb(16, 135, 165) !important;
+}
+.is-primary:focus {
+    background: rgb(16, 127, 155) !important;
+}
+.w-sm {
+    max-width: 25rem !important;
+}
+.has-gradient {
+    background: rgb(206,56,133);
+    background: -moz-linear-gradient(313deg, rgba(206,56,133,1) 0%, rgba(16,157,191,1) 100%);
+    background: -webkit-linear-gradient(313deg, rgba(206,56,133,1) 0%, rgba(16,157,191,1) 100%);
+    background: linear-gradient(313deg, rgba(206,56,133,1) 0%, rgba(16,157,191,1) 100%);
 }

@@ -12,18 +12,19 @@
 
 <body>
 
+  <!-- Navbar -->
   <nav class="navbar">
-    <div class="navbar-brand">
-      <h1 class="navbar-item is-size-3 has-text-weight-light">Swift<span class="is-size-3 has-text-weight-medium">Eval</span> </h1>
+    <div class="navbar-brand mt-1">
+     <img src="assets/images/swift-icon.jpg" alt="SwiftEval logo" width="60"><h1 class="navbar-item is-size-3 has-text-weight-light">Swift<span class="is-size-3 has-text-weight-medium">Eval</span> </h1>
     </div>
-    <div class="navbar-end">
+    <div class="navbar-end mt-1">
       <div class="navbar-item">
         <div class="buttons">
           <a class="dark-mode button is-light is-rounded shadow">
             <i class="fas fa-moon"></i>
           </a>
           <a class="question button is-light is-rounded shadow">
-            <i class="fa fa-question"></i>
+            <i class="fa fa-info-circle"></i>
           </a>
           <a class="profile button is-primary is-rounded shadow">
             <i class="fa fa-cog"></i>
@@ -75,7 +76,7 @@
     </div>
 
     <div class="field">
-      <label class="label has-text-weight-semi-bold">Tutor Name</label>
+      <label class="label has-text-weight-semibold">Tutor Name</label>
       <div class="control">
         <input class="shadow-sm tutor-name input is-rounded" type="name" placeholder="Smith, John" />
       </div>
@@ -86,23 +87,30 @@
     </div>
   </div>
 
-  <div class="angle-div p-5 has-background-primary"></div>
+  <!-- Angle div -->
+  <div class="angle-div p-5 has-gradient shadow-lg"></div>
 
-
+  <!-- Profile settings modal -->
   <div class="modal">
     <div class="modal-background"></div>
     <div class="modal-card">
       <header class="modal-card-head">
-        <p class="modal-card-title">Profile Settings</p>
+        <p class="modal-card-title has-text-centered">Profile Settings</p>
         <button class="delete" aria-label="close"></button>
       </header>
       <section class="modal-card-body">
-        <h3 class="is-size-5 ml-5 mt-5">Saved Info</h3>
-        <h4 class="modal-full-name ml-5 mt-3">Full Name: ...</h4>
-        <h4 class="modal-email ml-5 mt-1">Email: ...</h4>
-        <h4 class="modal-classcode ml-5 mt-1">Classcode: ...</h4>
-        <h4 class="modal-course-type ml-5 mt-1">Course Type: ...</h4>
-        <h4 class="modal-tutor-name ml-5 mt-1">Tutor Name: ...</h4>
+        <h3 class="is-size-5 has-text-weight-semibold ml-5 mt-5">Saved Info</h3>
+          <hr>
+        <h4 class="modal-full-name ml-5">Full Name: ...</h4>
+          <hr>
+        <h4 class="modal-email ml-5">Email: ...</h4>
+          <hr>
+        <h4 class="modal-classcode ml-5">Classcode: ...</h4>
+          <hr>
+        <h4 class="modal-course-type ml-5">Course Type: ...</h4>
+          <hr>
+        <h4 class="modal-tutor-name ml-5">Tutor Name: ...</h4>
+          <hr>
       </section>
       <footer class="modal-card-foot ">
         <button class="update-info button is-primary is-rounded shadow">Update Info</button>
@@ -110,6 +118,35 @@
       </footer>
     </div>
   </div>
+
+  <!-- Are you sure? modal -->
+  <div class="modal yes-no-modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title has-text-centered">Are you sure?</p>
+      </header>
+      
+      <footer class="modal-card-foot">
+        <button class="yes-button button is-primary is-rounded shadow">Yes</button>
+        <button class="no-button button is-rounded shadow">No</button>
+      </footer>
+    </div>
+  </div>
+
+    <!-- Alert modal -->
+    <div class="modal alert-modal has-text-centered">
+      <div class="modal-background"></div>
+      <div class="modal-card w-sm">
+        <header class="modal-card-head">
+          <p class="modal-card-title has-text-centered">Fill out all fields first.</p>
+          <button class="delete close-alert-modal-button" aria-label="close"></button>
+        </header>
+        
+        <footer class="modal-card-foot pt-5 pb-5">
+        </footer>
+      </div>
+    </div>
 
   <footer class="footer has-background-white mt-5">
     <div class="content has-text-centered mt-5">

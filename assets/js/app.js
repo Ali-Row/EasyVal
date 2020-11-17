@@ -2,6 +2,11 @@ const profileButton = document.querySelector(".profile");
 const helpButton = document.querySelector(".question");
 const deleteButtonModal = document.querySelector(".delete");
 const modal = document.querySelector(".modal");
+const alertModal = document.querySelector(".alert-modal");
+const closeAlertModalButton = document.querySelector(".close-alert-modal-button");
+const yesNoModal = document.querySelector(".yes-no-modal");
+const yesButton = document.querySelector(".yes-button");
+const noButton = document.querySelector(".no-button");
 const updateInfo = document.querySelector(".update-info");
 const deleteInfo = document.querySelector(".delete-info");
 const saveStudentButton = document.querySelector(".save");
@@ -19,17 +24,31 @@ const showModal = () => {
     const modalCourseType = document.querySelector(".modal-course-type");
     const modalTutorName = document.querySelector(".modal-tutor-name");
 
-
     modalFullName.textContent = "Full Name: " + readFromLocalStorage().fullName;
     modalEmail.textContent = "Email: " + readFromLocalStorage().email;
     modalClasscode.textContent = "Classcode: " + readFromLocalStorage().classcode;
     modalCourseType.textContent = "Course Type: " + readFromLocalStorage().courseType;
     modalTutorName.textContent = "Tutor Name: " + readFromLocalStorage().tutorName;
-
 };
 
 const hideModal = () => {
     modal.classList.remove("is-active");
+};
+
+const showYesNoModal = () => {
+    yesNoModal.classList.add("is-active");
+};
+
+const hideYesNoModal = () => {
+    yesNoModal.classList.remove("is-active");
+};
+
+const showAlertModal = () => {
+    alertModal.classList.add("is-active");
+};
+
+const hideAlertModal = () => {
+    alertModal.classList.remove("is-active");
 };
 
 const saveToLocalStorage = (data) => {
@@ -107,7 +126,7 @@ const fillOutForm = () => {
 readFromLocalStorage() ? generateEvalPage() : showHomeScreen();
 
 profileButton.addEventListener("click", () => {
-    readFromLocalStorage() ? showModal() : alert('Fill out fields first');
+    readFromLocalStorage() ? showModal() : showAlertModal();
 });
 deleteButtonModal.addEventListener("click", hideModal);
 
@@ -117,9 +136,28 @@ saveStudentButton.addEventListener("click", () => {
 });
 
 deleteInfo.addEventListener("click", () => {
-    deleteFromLocalStorage();
-    window.location.reload();
+    showYesNoModal();
 });
+
+yesButton.addEventListener("click", () => {
+    const fullName = document.querySelector(".full-name");
+    const email = document.querySelector(".email");
+    const classcode = document.querySelector(".classcode");
+    const courseType = document.querySelector(".course-type");
+    const tutorName = document.querySelector(".tutor-name");
+
+    fullName.value = '';
+    email.value = '';
+    classcode.value = '';
+    courseType.value = '';
+    tutorName.value = '';
+    deleteFromLocalStorage();
+    hideYesNoModal();
+    hideModal();
+    showHomeScreen();  
+})
+
+noButton.addEventListener("click", hideYesNoModal)
 
 updateInfo.addEventListener("click", () => {
     showHomeScreen();
@@ -138,3 +176,4 @@ updateInfo.addEventListener("click", () => {
 });
 
 openEvalFormButton.addEventListener("click", fillOutForm);
+closeAlertModalButton.addEventListener("click", hideAlertModal);
