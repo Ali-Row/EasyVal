@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link rel="stylesheet" href="assets/bulma/css/bulma.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <title>EasyVal</title>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <h1 class="navbar-item is-size-3 has-text-weight-medium">EasyVal</h1>
+    </div>
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="dark-mode button is-light is-rounded">
+            <i class="fas fa-moon"></i>
+          </a>
+          <a class="question button is-light is-rounded">
+            <i class="fa fa-question"></i>
+          </a>
+          <a class="profile button is-primary is-rounded">
+            <i class="fa fa-cog"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- Eval Page -->
+  <div class="container px-2 py-5">
+    <div class="eval" style="display: none;">Welcome!</div>
+  </div>
+  <!-- Home Page -->
+  <div class="input-fields container is-max-desktop px-2 py-5">
+    <div class="field">
+      <label class="label">Name</label>
+      <div class="control">
+        <input class="name input is-rounded" type="text" placeholder="e.g Alex Smith" />
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Email</label>
+      <div class="control">
+        <input class="email input is-rounded" type="email" placeholder="e.g. alexsmith@gmail.com" />
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Classcode</label>
+      <div class="control">
+        <input class="classcode input is-rounded" type="email" placeholder="e.g. UR-RICH-FSF-123456" />
+      </div>
+    </div>
+
+    <div class="control">
+      <button class="save button is-primary is-rounded">Save</button>
+    </div>
+  </div>
+
+  <div class="angle-div p-5 has-background-primary"></div>
+
+
+  <div class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Profile Settings</p>
+        <button class="delete" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <h3 class="is-size-5 m-5">Saved Info</h3>
+        <h4 class="modal-name m-5">Name: ...</h4>
+        <h4 class="modal-email m-5">Email: ...</h4>
+        <h4 class="modal-classcode m-5">Classcode: ...</h4>
+      </section>
+      <footer class="modal-card-foot ">
+        <button class="update-info button is-primary is-rounded">Update Info</button>
+        <button class="delete-info button is-rounded">Delete</button>
+      </footer>
+    </div>
+  </div>
+
+  <footer class="footer has-background-white">
+    <div class="content has-text-centered">
+      <p>
+        <strong>EasyVal</strong> by <a href="https://ali-row.github.io/portfolio/" target="_blank">Alistair Rowden</a>. The source code is licensed
+        <a href="http://opensource.org/licenses/mit-license.php" target="_blank">MIT</a>. The website content
+        is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY NC SA 4.0</a>.
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+
+</html>
