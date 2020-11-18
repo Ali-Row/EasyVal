@@ -230,9 +230,10 @@ darkModeButton.addEventListener("click", () => {
     const isDarkMode = JSON.parse(localStorage.getItem('is-dark-mode'));
     isDarkMode ? localStorage.setItem('is-dark-mode', false) : localStorage.setItem('is-dark-mode', true);  
 });
-
+const maybeTryDarkMode = $.querySelector('.maybe-try-dark-mode');
 const isDarkMode = JSON.parse(localStorage.getItem('is-dark-mode'));
 isDarkMode ? toggleDarkMode() : null;
+isDarkMode ? maybeTryDarkMode.textContent = 'P.S. Maybe try light mode you might prefer it? 😉' : maybeTryDarkMode.textContent = 'P.S. Maybe try dark mode you might prefer it? 😉';
 
 // If there is data in localStorage generate the eval page else show the home screen.
 readFromLocalStorage() ? generateEvalPage() : showHomeScreen();
