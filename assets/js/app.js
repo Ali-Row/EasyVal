@@ -131,17 +131,30 @@ const toggleDarkMode = () => {
     const modalHeader = document.querySelectorAll('.modal-card-head');
     const modalBody = document.querySelectorAll('.modal-card-body');
     const modalFooter = document.querySelectorAll('.modal-card-foot');
+    const hr = document.querySelectorAll('hr');
     const footer = document.querySelector('.footer');
-
 
     html.classList.toggle('dark-mode-background-is-active');
     navbar.classList.toggle('dark-mode-background-is-active');
     footer.classList.toggle('dark-mode-background-is-active');
     button.forEach(x=>x.classList.toggle('dark-mode-is-active-offset'));
+    button.forEach(x=>x.classList.toggle('dark-mode-text-is-active'));
+
     input.forEach(x=>x.classList.toggle('dark-mode-is-active-offset'));
+    input.forEach(x=>x.classList.toggle('dark-mode-text-is-active'));
+
     modalHeader.forEach(x=>x.classList.toggle('dark-mode-is-active-offset'));
+    modalHeader.forEach(x=>x.classList.toggle('dark-mode-text-is-active'));
+
     modalBody.forEach(x=>x.classList.toggle('dark-mode-is-active-offset'));
+    modalBody.forEach(x=>x.classList.toggle('dark-mode-text-is-active'));
+
     modalFooter.forEach(x=>x.classList.toggle('dark-mode-is-active-offset'));
+    modalFooter.forEach(x=>x.classList.toggle('dark-mode-text-is-active'));
+
+    hr.forEach(x=>x.classList.toggle('dark-mode-background-is-active'));
+    hr.forEach(x=>x.classList.toggle('dark-mode-text-is-active'));
+
 
 }
 

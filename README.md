@@ -1,2 +1,2 @@
 # SwiftEval
-SwiftVal is a better way for students to fill out the student evaluation forms.
+SwiftEval is a better way for students to fill out the student evaluation forms.
