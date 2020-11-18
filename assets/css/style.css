@@ -1,3 +1,6 @@
+input {
+    border-color: rgb(147, 147, 147) !important;
+}
 .swifteval-logo {
     max-width: 65px !important;
     max-height: 65px !important;
@@ -27,6 +30,15 @@
 }
 .is-primary:focus {
     background: rgb(16, 127, 155) !important;
+}
+.footer-link {
+    color: rgb(16, 147, 180) !important;
+}
+.footer-link:hover {
+    color: rgb(16, 135, 165) !important;
+}
+.footer-link:focus {
+    color: rgb(16, 127, 155) !important;
 }
 .w-sm {
     max-width: 25rem !important;

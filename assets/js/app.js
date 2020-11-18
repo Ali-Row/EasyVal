@@ -219,4 +219,9 @@ darkModeButton.addEventListener("click", () => {
     toggleDarkMode();
     const moonIcon = document.querySelector('.fa-moon');
     moonIcon.classList.toggle('rotateIn');
+    const isDarkMode = JSON.parse(localStorage.getItem('is-dark-mode'));
+    isDarkMode ? localStorage.setItem('is-dark-mode', false) : localStorage.setItem('is-dark-mode', true);  
 });
+
+const isDarkMode = JSON.parse(localStorage.getItem('is-dark-mode'));
+isDarkMode ? toggleDarkMode() : null;
