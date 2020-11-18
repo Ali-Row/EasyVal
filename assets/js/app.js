@@ -26,7 +26,7 @@ const showModal = () => {
     const modalCourseType = $.querySelector(".modal-course-type");
     const modalTutorName = $.querySelector(".modal-tutor-name");
 
-    modalFullName.textContent = "Full Name: " + readFromLocalStorage().fullName;
+    modalFullName.innerHTML = "Full Name: " + readFromLocalStorage().fullName;
     modalEmail.textContent = "Email: " + readFromLocalStorage().email;
     modalClasscode.textContent = "Classcode: " + readFromLocalStorage().classcode;
     modalCourseType.textContent = "Course Type: " + readFromLocalStorage().courseType;

@@ -5,6 +5,16 @@ input {
     max-width: 65px !important;
     max-height: 65px !important;
 }
+.fill-form-icon {
+    margin-top: -16rem;
+    transform: skewY(-3deg) !important;
+    max-width: 35rem;
+}
+.opened-tabs {
+    margin-top: -19rem;
+    transform: skewY(-3deg) !important;
+    max-width: 45rem;
+}
 .angle-div {
     padding-top: 200px !important;
     padding-bottom: 200px !important;
@@ -74,4 +84,10 @@ input {
 }
 ::placeholder {
     color: rgb(116, 116, 116) !important;
+}
+
+@media screen and (max-width: 1250px) {
+    .fill-form-icon, .opened-tabs {
+      display: none;
+    }
 }
