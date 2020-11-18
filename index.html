@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   <link rel="stylesheet" href="assets/css/bulma.min.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="shortcut icon" href="assets/images/swift-icon.jpg" type="image/x-icon">
@@ -39,10 +40,10 @@
   <!-- Eval Page -->
   <div class="container is-max-desktop px-2 py-5 has-text-centered">
     <div class="eval" style="display: none;">
-      <h1 class="welcome-message mt-5 is-size-2 has-text-weight-light"></h1>
-      <h3 class="mt-5 is-size-5">Click the button below to generate your student evaluation form.</h3>
+      <h1 class="welcome-message mt-5 is-size-2 has-text-weight-light animated bounceInDown fast"></h1>
+      <h3 class="mt-5 is-size-5 animated bounceIn fast">Click the button below to generate your student evaluation form.</h3>
     
-        <a href="#" target="_blank" class="mt-5 dark-mode button is-light is-rounded open-eval-form shadow">Generate Eval Form</a>    
+        <a href="#" target="_blank" class="mt-5 dark-mode button is-light is-rounded open-eval-form shadow animated bounceIn delay-500ms">Generate Eval Form</a>    
     </div>
   </div>
 
@@ -89,13 +90,13 @@
   </div>
 
   <!-- Angle div -->
-  <div class="angle-div p-5 has-gradient shadow-lg"></div>
+  <div class="angle-div p-5 has-gradient shadow-lg animated zoomInUp delay-800ms"></div>
 
 
   <!-- Profile settings modal -->
   <div class="modal">
     <div class="modal-background"></div>
-    <div class="modal-card">
+    <div class="modal-card animated zoomInDown faster">
       <header class="modal-card-head">
         <p class="modal-card-title has-text-centered">Profile Settings</p>
         <button class="delete close-button" aria-label="close"></button>
@@ -124,7 +125,7 @@
   <!-- Are you sure? modal -->
   <div class="modal yes-no-modal">
     <div class="modal-background"></div>
-    <div class="modal-card">
+    <div class="modal-card animated bounce faster">
       <header class="modal-card-head">
         <p class="modal-card-title has-text-centered">Are you sure?</p>
       </header>
@@ -139,7 +140,7 @@
     <!-- Alert modal -->
     <div class="modal alert-modal has-text-centered">
       <div class="modal-background"></div>
-      <div class="modal-card w-sm">
+      <div class="modal-card w-sm animated bounce faster">
         <header class="modal-card-head">
           <p class="modal-card-title has-text-centered">Fill out all fields first.</p>
           <button class="delete close-alert-modal-button" aria-label="close"></button>
