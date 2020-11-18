@@ -1,93 +1,110 @@
+.navbar {
+  display: flex !important;
+  justify-content: space-between !important;
+}
 input {
-    border-color: rgb(147, 147, 147) !important;
+  border-color: rgb(147, 147, 147) !important;
 }
 .swifteval-logo {
-    max-width: 65px !important;
-    max-height: 65px !important;
+  max-width: 65px !important;
+  max-height: 65px !important;
 }
 .fill-form-icon {
-    margin-top: -16rem;
-    transform: skewY(-3deg) !important;
-    max-width: 35rem;
+  margin-top: -16rem;
+  transform: skewY(-3deg) !important;
+  max-width: 35rem;
 }
 .opened-tabs {
-    margin-top: -19rem;
-    transform: skewY(-3deg) !important;
-    max-width: 45rem;
+  margin-top: -19rem;
+  transform: skewY(-3deg) !important;
+  max-width: 45rem;
 }
 .angle-div {
-    padding-top: 200px !important;
-    padding-bottom: 200px !important;
-    margin-top: 10rem;
-    transform: skewY(3deg) !important;
-    border-top: double black 9px;
-    border-bottom: dotted black 5px;
+  padding-top: 200px !important;
+  padding-bottom: 200px !important;
+  margin-top: 10rem;
+  transform: skewY(3deg) !important;
+  border-top: double black 9px;
+  border-bottom: dotted black 5px;
 }
 .shadow {
-    box-shadow: 1px 2px 4px #4848484d !important;
+  box-shadow: 1px 2px 4px #4848484d !important;
 }
 .shadow-sm {
-    box-shadow: 1px 1px 6px #4848481c !important;
+  box-shadow: 1px 1px 6px #4848481c !important;
 }
 .shadow-lg {
-    box-shadow: 1px 4px 9px #48484894 !important;
+  box-shadow: 1px 4px 9px #48484894 !important;
 }
-.is-primary, .has-background-primary {
-    background: rgb(16, 147, 180) !important;
+.is-primary,
+.has-background-primary {
+  background: rgb(16, 147, 180) !important;
 }
 .is-primary:hover {
-    background: rgb(16, 135, 165) !important;
+  background: rgb(16, 135, 165) !important;
 }
 .is-primary:focus {
-    background: rgb(16, 127, 155) !important;
+  background: rgb(16, 127, 155) !important;
 }
 .footer-link {
-    color: rgb(16, 147, 180) !important;
+  color: rgb(16, 147, 180) !important;
 }
 .footer-link:hover {
-    color: rgb(16, 135, 165) !important;
+  color: rgb(16, 135, 165) !important;
 }
 .footer-link:focus {
-    color: rgb(16, 127, 155) !important;
+  color: rgb(16, 127, 155) !important;
 }
 .w-sm {
-    max-width: 25rem !important;
+  max-width: 25rem !important;
 }
 .has-gradient {
-    background: rgb(206,56,133);
-    background: -moz-linear-gradient(313deg, rgba(206,56,133,1) 0%, rgba(16,157,191,1) 100%);
-    background: -webkit-linear-gradient(313deg, rgba(206,56,133,1) 0%, rgba(16,157,191,1) 100%);
-    background: linear-gradient(313deg, rgba(206,56,133,1) 0%, rgba(16,157,191,1) 100%);
+  background: rgb(206, 56, 133);
+  background: -moz-linear-gradient(
+    313deg,
+    rgba(206, 56, 133, 1) 0%,
+    rgba(16, 157, 191, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    313deg,
+    rgba(206, 56, 133, 1) 0%,
+    rgba(16, 157, 191, 1) 100%
+  );
+  background: linear-gradient(
+    313deg,
+    rgba(206, 56, 133, 1) 0%,
+    rgba(16, 157, 191, 1) 100%
+  );
 }
 .dark-mode-background-is-active {
-    background: rgb(24,24,24) !important;
+  background: rgb(24, 24, 24) !important;
 }
 .dark-mode-is-active-offset {
-    background: rgb(45, 45, 45) !important;
+  background: rgb(45, 45, 45) !important;
 }
 .dark-mode-text-is-active {
-    color: rgb(152, 152, 152) !important;
+  color: rgb(152, 152, 152) !important;
 }
 .is-dark {
-    border-color: rgb(38, 38, 38) !important;
-    background: rgb(38, 38, 38) !important;
-    color: rgb(116, 116, 116) !important;
+  border-color: rgb(38, 38, 38) !important;
+  background: rgb(38, 38, 38) !important;
+  color: rgb(116, 116, 116) !important;
 }
 .is-dark:hover {
-    background: rgb(34, 34, 34) !important;
-    border-color: rgb(34, 34, 34) !important;
-
+  background: rgb(34, 34, 34) !important;
+  border-color: rgb(34, 34, 34) !important;
 }
 .is-dark:focus {
-    background: rgb(31, 31, 31) !important;
-    border-color: rgb(31, 31, 31) !important;
+  background: rgb(31, 31, 31) !important;
+  border-color: rgb(31, 31, 31) !important;
 }
 ::placeholder {
-    color: rgb(116, 116, 116) !important;
+  color: rgb(116, 116, 116) !important;
 }
 
 @media screen and (max-width: 1250px) {
-    .fill-form-icon, .opened-tabs {
-      display: none;
-    }
+  .fill-form-icon,
+  .opened-tabs {
+    display: none;
+  }
 }
