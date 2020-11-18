@@ -37,15 +37,26 @@
     background: -webkit-linear-gradient(313deg, rgba(206,56,133,1) 0%, rgba(16,157,191,1) 100%);
     background: linear-gradient(313deg, rgba(206,56,133,1) 0%, rgba(16,157,191,1) 100%);
 }
-/* .dark-mode-text-is-active {
-    color: ;
-} */
 .dark-mode-background-is-active {
     background: rgb(24,24,24) !important;
 }
 .dark-mode-is-active-offset {
-    background: rgb(48, 48, 48) !important;
+    background: rgb(45, 45, 45) !important;
 }
 .dark-mode-text-is-active {
-    color: rgb(131, 131, 131) !important;
+    color: rgb(152, 152, 152) !important;
+}
+.is-dark {
+    border-color: rgb(38, 38, 38) !important;
+    background: rgb(38, 38, 38) !important;
+    color: rgb(116, 116, 116) !important;
+}
+.is-dark:hover {
+    background: rgb(34, 34, 34) !important;
+    border-color: rgb(34, 34, 34) !important;
+
+}
+.is-dark:focus {
+    background: rgb(31, 31, 31) !important;
+    border-color: rgb(31, 31, 31) !important;
 }

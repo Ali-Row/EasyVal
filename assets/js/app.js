@@ -132,13 +132,14 @@ const toggleDarkMode = () => {
     const modalBody = document.querySelectorAll('.modal-card-body');
     const modalFooter = document.querySelectorAll('.modal-card-foot');
     const hr = document.querySelectorAll('hr');
+    const p = document.querySelectorAll('p');
     const footer = document.querySelector('.footer');
 
     html.classList.toggle('dark-mode-background-is-active');
     navbar.classList.toggle('dark-mode-background-is-active');
     footer.classList.toggle('dark-mode-background-is-active');
-    button.forEach(x=>x.classList.toggle('dark-mode-is-active-offset'));
-    button.forEach(x=>x.classList.toggle('dark-mode-text-is-active'));
+    button.forEach(x=>x.classList.toggle('is-dark'));
+
 
     input.forEach(x=>x.classList.toggle('dark-mode-is-active-offset'));
     input.forEach(x=>x.classList.toggle('dark-mode-text-is-active'));
@@ -154,6 +155,8 @@ const toggleDarkMode = () => {
 
     hr.forEach(x=>x.classList.toggle('dark-mode-background-is-active'));
     hr.forEach(x=>x.classList.toggle('dark-mode-text-is-active'));
+
+    p.forEach(x=>x.classList.toggle('dark-mode-text-is-active'));
 
 
 }
