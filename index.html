@@ -17,7 +17,9 @@
   <!-- Navbar -->
   <nav class="navbar">
     <div class="navbar-brand mt-1">
-     <img src="assets/images/swift-icon.jpg" alt="SwiftEval logo" class="swifteval-logo"><h1 class="navbar-item is-size-3 has-text-weight-light">Swift<span class="is-size-3 has-text-weight-medium">Eval</span> </h1>
+      <img src="assets/images/swift-icon.jpg" alt="SwiftEval logo" class="swifteval-logo">
+      <h1 class="navbar-item is-size-3 has-text-weight-light">Swift<span
+          class="is-size-3 has-text-weight-medium">Eval</span> </h1>
     </div>
     <div class="navbar-end mt-1">
       <div class="navbar-item">
@@ -41,9 +43,12 @@
   <div class="container is-max-desktop px-2 py-5 has-text-centered">
     <div class="eval" style="display: none;">
       <h1 class="welcome-message mt-5 is-size-2 has-text-weight-light animated bounceInDown fast"></h1>
-      <h3 class="mt-5 is-size-5 animated bounceIn fast">Click the button below to generate your student evaluation form.</h3>
-    
-        <a href="#" target="_blank" class="mt-5 dark-mode button is-light is-rounded open-eval-form shadow animated bounceIn delay-500ms">Generate Eval Form</a>    
+      <h3 class="mt-5 is-size-5 animated bounceIn fast">Click the button below to generate your student evaluation form.
+      </h3>
+
+      <a href="#" target="_blank"
+        class="mt-5 dark-mode button is-light is-rounded open-eval-form shadow animated bounceIn delay-500ms">Generate
+        Eval Form</a>
     </div>
   </div>
 
@@ -92,10 +97,12 @@
   <!-- Angle div -->
   <div class="angle-div has-gradient shadow-lg animated zoomInUp delay-800ms columns has-text-centered is-max-desktop">
     <div class="column">
-      <img src="assets/images/fill-form-icon.svg" class="fill-form-icon animated zoomInLeft delay-2s" alt="Svg image of a person standing next to a web page">
+      <img src="assets/images/fill-form-icon.svg" class="fill-form-icon animated zoomInLeft delay-2s"
+        alt="Svg image of a person standing next to a web page">
     </div>
     <div class="column">
-      <img src="assets/images/opened-tabs.svg" class="opened-tabs animated zoomInRight delay-1s" alt="Svg image of a person standing next to open browser windows">
+      <img src="assets/images/opened-tabs.svg" class="opened-tabs animated zoomInRight delay-1s"
+        alt="Svg image of a person standing next to open browser windows">
     </div>
   </div>
 
@@ -110,17 +117,17 @@
       </header>
       <section class="modal-card-body">
         <h3 class="is-size-5 has-text-weight-semibold ml-5 mt-5">Saved Info</h3>
-          <hr>
+        <hr>
         <h4 class="modal-full-name ml-5">Full Name: ...</h4>
-          <hr>
+        <hr>
         <h4 class="modal-email ml-5">Email: ...</h4>
-          <hr>
+        <hr>
         <h4 class="modal-classcode ml-5">Classcode: ...</h4>
-          <hr>
+        <hr>
         <h4 class="modal-course-type ml-5">Course Type: ...</h4>
-          <hr>
+        <hr>
         <h4 class="modal-tutor-name ml-5">Tutor Name: ...</h4>
-          <hr>
+        <hr>
       </section>
       <footer class="modal-card-foot ">
         <button class="update-info button is-primary is-rounded shadow">Update Info</button>
@@ -136,7 +143,7 @@
       <header class="modal-card-head">
         <p class="modal-card-title has-text-centered">Are you sure?</p>
       </header>
-      
+
       <footer class="modal-card-foot">
         <button class="yes-button button is-primary is-rounded shadow">Yes</button>
         <button class="no-button button is-rounded shadow">No</button>
@@ -144,23 +151,78 @@
     </div>
   </div>
 
-    <!-- Alert modal -->
-    <div class="modal alert-modal has-text-centered">
-      <div class="modal-background"></div>
-      <div class="modal-card w-sm animated bounce faster">
-        <header class="modal-card-head">
-          <p class="modal-card-title has-text-centered is-size-5">Fill out all fields first.</p>
-          <button class="delete close-alert-modal-button" aria-label="close"></button>
-        </header>
-        
-        <footer class="modal-card-foot pt-5 pb-5">
-        </footer>
-      </div>
+  <!-- Alert modal -->
+  <div class="modal alert-modal has-text-centered">
+    <div class="modal-background"></div>
+    <div class="modal-card w-sm animated bounce faster">
+      <header class="modal-card-head">
+        <p class="modal-card-title has-text-centered is-size-5">Fill out all fields first.</p>
+        <button class="delete close-alert-modal-button" aria-label="close"></button>
+      </header>
+
+      <footer class="modal-card-foot pt-5 pb-5">
+      </footer>
     </div>
+  </div>
+
+  <!-- Info modal -->
+  <div class="modal info-modal has-text-centered">
+    <div class="modal-background"></div>
+    <div class="modal-card animated bounceInDown faster">
+      <header class="modal-card-head">
+        <p class="modal-card-title has-text-centered is-size-3 has-text-weight-medium">Tips</p>
+        <button class="delete close-info-modal-button" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <h4 class="is-size-5 has-text-weight-medium">Step 1)</h4>
+        <h4>Fill out your full name.</h4>
+        <hr>
+        <h4 class="is-size-5 has-text-weight-medium">Step 2)</h4>
+        <h4>Fill out your email.</h4>
+        <hr>
+        <h4 class="is-size-5 has-text-weight-medium">Step 3)</h4>
+        <h4>Fill out your classcode. <br>
+          (This can be sent to you by your tutor if you don't remember it.)</h4>
+        <hr>
+        <h4 class="is-size-5 has-text-weight-medium">Step 4)</h4>
+        <h4>Fill out your course type, <br>
+          This must be written exactly like the examples below. <br>
+          (Simply copy & paste whichever one applies to you.) <br> <br>
+        </h4>
+        <hr>
+        FSF - Full Stack Flex Web Development(Javascript) <br>
+        <hr>
+        DV - Data Visualization <br>
+        <hr>
+        Cyber - Cyber Security <br>
+        <hr>
+        FinTech - Financial Technology <br>
+        <hr>
+        UXUI - User Experience & User Interfacing <br>
+        <hr>
+        Digital Marketing <br>
+        <hr>
+        Tech Project Management
+
+        <hr>
+        <h4 class="is-size-5 has-text-weight-medium">Step 5)</h4>
+        <h4>Fill out your tutors name with the last name first.</h4> <br>
+        This must be written exactly like it is written in the google form. <br>
+        ie. If your tutors name is John Smith, then you would type <br>
+        <h4 class="is-size-5">Smith, John</h4> 
+        <hr>
+        <h4 class="is-size-5 has-text-weight-medium">Step 6)</h4>
+        Simply click on the Generate Eval Form button!
+      </section>
+      <footer class="modal-card-foot pt-5 pb-5">
+      </footer>
+    </div>
+  </div>
 
   <footer class="footer has-background-white mt-5">
     <div class="content has-text-centered mt-5">
-      <p class="is-size-5"> Swift<span class="has-text-weight-semibold">Eval</span> by <a href="https://ali-row.github.io/portfolio/" target="_blank" class="footer-link">Alistair Rowden</a>.</p>
+      <p class="is-size-5"> Swift<span class="has-text-weight-semibold">Eval</span> by <a
+          href="https://ali-row.github.io/portfolio/" target="_blank" class="footer-link">Alistair Rowden</a>.</p>
     </div>
   </footer>
 

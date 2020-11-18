@@ -5,6 +5,8 @@ const darkModeButton = $.querySelector(".dark-mode-button");
 const closeModalButton = $.querySelector(".close-button");
 const modal = $.querySelector(".modal");
 const alertModal = $.querySelector(".alert-modal");
+const infoModal = $.querySelector(".info-modal");
+const closeInfoModalButton = $.querySelector(".close-info-modal-button");
 const closeAlertModalButton = $.querySelector(".close-alert-modal-button");
 const yesNoModal = $.querySelector(".yes-no-modal");
 const yesButton = $.querySelector(".yes-button");
@@ -43,6 +45,13 @@ const showYesNoModal = () => {
 
 const hideYesNoModal = () => {
     yesNoModal.classList.remove("is-active");
+};
+const showInfoModal = () => {
+    infoModal.classList.add("is-active");
+};
+
+const hideInfoModal = () => {
+    infoModal.classList.remove("is-active");
 };
 
 const showAlertModal = () => {
@@ -87,7 +96,7 @@ const showHomeScreen = () => {
     }
 };
 
-const getStudentInfo = () => {
+const getStudentInfo = (event) => {
     const fullName = $.querySelector(".full-name").value.trim();
     const email = $.querySelector(".email").value.trim();
     const classcode = $.querySelector(".classcode").value.trim();
@@ -95,7 +104,7 @@ const getStudentInfo = () => {
     const tutorName = $.querySelector(".tutor-name").value.trim();
 
     const studentObject = new GenerateStudentObject(fullName, email, classcode, courseType, tutorName);
-    saveToLocalStorage(studentObject);
+    saveToLocalStorage(studentObject); 
 };
 
 class GenerateStudentObject {
@@ -211,6 +220,8 @@ updateInfo.addEventListener("click", () => {
 });
 
 openEvalFormButton.addEventListener("click", fillOutForm);
+infoButton.addEventListener("click", showInfoModal);
+closeInfoModalButton.addEventListener("click", hideInfoModal);
 closeAlertModalButton.addEventListener("click", hideAlertModal);
 darkModeButton.addEventListener("click", () => {
     toggleDarkMode();
