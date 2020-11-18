@@ -118,8 +118,9 @@ const fillOutForm = () => {
     const year = new Date().getFullYear();
     const month = new Date().getMonth() + 1;
     const day = new Date().getDate();
+    
 
-    const date = `&entry.401287639_year=${year}&entry.401287639_month=${month}&entry.401287639_day=${day}`
+    const date = `&entry.401287639_year=${year}&entry.401287639_month=${month}&entry.401287639_day=${day}&entry.307452879=50`
     const studentInfo = `?&entry.737967299=${fullName}&entry.760591640=${email}&entry.526528092=${classcode}&entry.698926831=No&entry.831839664=${tutorName}&entry.134267295=${courseType}${date}`;
     openEvalFormButton.href = `https://docs.google.com/forms/d/e/1FAIpQLSdb4ejjbqoqKO-Q4k7zeO_xwykwB0dxYLWYm1mX5Ik45MzEeg/viewform${studentInfo}`
 }
