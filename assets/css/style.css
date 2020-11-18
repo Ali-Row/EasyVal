@@ -60,3 +60,6 @@
     background: rgb(31, 31, 31) !important;
     border-color: rgb(31, 31, 31) !important;
 }
+::placeholder {
+    color: rgb(116, 116, 116) !important;
+}

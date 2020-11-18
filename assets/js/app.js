@@ -140,7 +140,6 @@ const toggleDarkMode = () => {
     footer.classList.toggle('dark-mode-background-is-active');
     button.forEach(x=>x.classList.toggle('is-dark'));
 
-
     input.forEach(x=>x.classList.toggle('dark-mode-is-active-offset'));
     input.forEach(x=>x.classList.toggle('dark-mode-text-is-active'));
 
@@ -216,4 +215,8 @@ updateInfo.addEventListener("click", () => {
 
 openEvalFormButton.addEventListener("click", fillOutForm);
 closeAlertModalButton.addEventListener("click", hideAlertModal);
-darkModeButton.addEventListener("click", toggleDarkMode);
+darkModeButton.addEventListener("click", () => {
+    toggleDarkMode();
+    const moonIcon = document.querySelector('.fa-moon');
+    moonIcon.classList.toggle('rotateIn');
+});
