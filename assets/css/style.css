@@ -110,7 +110,8 @@ input {
 }
 
 @media screen and (max-width: 450px) {
-  html, body {
+  html,
+  body {
     overflow-x: hidden;
   }
   .navbar {
@@ -118,6 +119,6 @@ input {
     align-items: center !important;
   }
   .swifteval-logo {
-    margin: 0rem auto !important
+    margin: 0rem auto !important;
   }
 }
