@@ -76,6 +76,7 @@ const deleteFromLocalStorage = () => {
 };
 
 const generateEvalPage = () => {
+
     if (inputFields.style.display === "none") {
         inputFields.style.display = "block";
         evalPage.style.display = "none";
