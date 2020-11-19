@@ -25,7 +25,7 @@ const evalPage = $.querySelector('.eval-page');
 const openEvalFormButton = $.querySelector('.open-eval-form');
 
 const showModalWithStudentData = (modalName) => {
-    modalName.classList.add('is-active');
+    showModal(modalName);
     const modalFullName = $.querySelector('.modal-full-name');
     const modalEmail = $.querySelector('.modal-email');
     const modalClasscode = $.querySelector('.modal-classcode');
@@ -88,13 +88,7 @@ const getStudentInfo = () => {
     const courseType = $.querySelector('.course-type').value.trim();
     const tutorName = $.querySelector('.tutor-name').value.trim();
 
-    const studentObject = new GenerateStudentObject(
-        fullName,
-        email,
-        classcode,
-        courseType,
-        tutorName
-    );
+    const studentObject = new GenerateStudentObject(fullName, email, classcode, courseType, tutorName);
     saveToLocalStorage(studentObject);
 };
 
@@ -122,8 +116,9 @@ const fillOutForm = () => {
     const studentInfo = `?&entry.737967299=${fullName}&entry.760591640=${email}&entry.526528092=${classcode}&entry.698926831=No&entry.831839664=${tutorName}&entry.134267295=${courseType}${date}`;
     openEvalFormButton.href = `https://docs.google.com/forms/d/e/1FAIpQLSdb4ejjbqoqKO-Q4k7zeO_xwykwB0dxYLWYm1mX5Ik45MzEeg/viewform${studentInfo}`;
 };
+
 // helper function to help slimline the dark mode function below
-const darkModeHelper = (element, className) => {
+const addDarkModeClass = (element, className) => {
     element.forEach((x) => x.classList.toggle(className));
 };
 
@@ -138,37 +133,30 @@ const toggleDarkMode = () => {
     const hr = $.querySelectorAll('hr');
     const p = $.querySelectorAll('p');
     const footer = $.querySelector('.footer');
-
     html.classList.toggle('dark-mode-background-is-active');
     navbar.classList.toggle('dark-mode-background-is-active');
     footer.classList.toggle('dark-mode-background-is-active');
-
-    darkModeHelper(button, 'is-dark');
-    darkModeHelper(input, 'dark-mode-is-active-offset');
-    darkModeHelper(input, 'dark-mode-text-is-active');
-    darkModeHelper(modalHeader, 'dark-mode-is-active-offset');
-    darkModeHelper(modalHeader, 'dark-mode-text-is-active');
-    darkModeHelper(modalBody, 'dark-mode-is-active-offset');
-    darkModeHelper(modalBody, 'dark-mode-text-is-active');
-    darkModeHelper(modalFooter, 'dark-mode-is-active-offset');
-    darkModeHelper(modalFooter, 'dark-mode-text-is-active');
-    darkModeHelper(hr, 'dark-mode-background-is-active');
-    darkModeHelper(hr, 'dark-mode-text-is-active');
-    darkModeHelper(p, 'dark-mode-text-is-active');
+    addDarkModeClass(button, 'is-dark');
+    addDarkModeClass(input, 'dark-mode-is-active-offset');
+    addDarkModeClass(input, 'dark-mode-text-is-active');
+    addDarkModeClass(modalHeader, 'dark-mode-is-active-offset');
+    addDarkModeClass(modalHeader, 'dark-mode-text-is-active');
+    addDarkModeClass(modalBody, 'dark-mode-is-active-offset');
+    addDarkModeClass(modalBody, 'dark-mode-text-is-active');
+    addDarkModeClass(modalFooter, 'dark-mode-is-active-offset');
+    addDarkModeClass(modalFooter, 'dark-mode-text-is-active');
+    addDarkModeClass(hr, 'dark-mode-background-is-active');
+    addDarkModeClass(hr, 'dark-mode-text-is-active');
+    addDarkModeClass(p, 'dark-mode-text-is-active');
 };
 
 profileButton.addEventListener('click', () => {
     readFromLocalStorage('student-info') ? showModalWithStudentData(modal) : showModal(alertModal);
 });
-closeModalButton.addEventListener('click', () => hideModal(modal));
 
 saveStudentButton.addEventListener('click', () => {
     getStudentInfo();
     generateEvalPage();
-});
-
-deleteInfoButton.addEventListener('click', () => {
-    showModal(yesNoModal);
 });
 
 yesButton.addEventListener('click', () => {
@@ -177,7 +165,6 @@ yesButton.addEventListener('click', () => {
     const classcode = $.querySelector('.classcode');
     const courseType = $.querySelector('.course-type');
     const tutorName = $.querySelector('.tutor-name');
-
     fullName.value = '';
     email.value = '';
     classcode.value = '';
@@ -191,6 +178,12 @@ yesButton.addEventListener('click', () => {
 
 noButton.addEventListener('click', () => hideModal(yesNoModal));
 
+closeModalButton.addEventListener('click', () => hideModal(modal));
+closeAlertModalButton.addEventListener('click', () => hideModal(alertModal));
+closeInfoModalButton.addEventListener('click', () => hideModal(infoModal));
+infoButton.addEventListener('click', () => showModal(infoModal));
+openEvalFormButton.addEventListener('click', fillOutForm);
+
 updateInfoButton.addEventListener('click', () => {
     showHomeScreen();
     hideModal(modal);
@@ -199,7 +192,6 @@ updateInfoButton.addEventListener('click', () => {
     const classcode = $.querySelector('.classcode');
     const courseType = $.querySelector('.course-type');
     const tutorName = $.querySelector('.tutor-name');
-
     fullName.value = readFromLocalStorage('student-info').fullName;
     email.value = readFromLocalStorage('student-info').email;
     classcode.value = readFromLocalStorage('student-info').classcode;
@@ -207,10 +199,10 @@ updateInfoButton.addEventListener('click', () => {
     tutorName.value = readFromLocalStorage('student-info').tutorName;
 });
 
-openEvalFormButton.addEventListener('click', fillOutForm);
-infoButton.addEventListener('click', () => showModal(infoModal));
-closeInfoModalButton.addEventListener('click', () => hideModal(infoModal));
-closeAlertModalButton.addEventListener('click', () => hideModal(alertModal));
+deleteInfoButton.addEventListener('click', () => {
+    showModal(yesNoModal);
+});
+
 darkModeButton.addEventListener('click', () => {
     toggleDarkMode();
     const moonIcon = $.querySelector('.fa-moon');

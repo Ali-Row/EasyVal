@@ -109,9 +109,15 @@ input {
   }
 }
 
-@media screen and (max-width: 429px) {
+@media screen and (max-width: 450px) {
+  html, body {
+    overflow-x: hidden;
+  }
   .navbar {
     flex-direction: column !important;
     align-items: center !important;
+  }
+  .swifteval-logo {
+    margin: 0rem auto !important
   }
 }
