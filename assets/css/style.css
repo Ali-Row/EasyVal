@@ -40,11 +40,10 @@ input {
   box-shadow: 1px 4px 9px #48484894 !important;
 }
 .is-primary,
-.has-background-primary,
-.active {
+.has-background-primary {
   background: rgb(16, 147, 180) !important;
 }
-.is-primary:hover, .active:hover {
+.is-primary:hover {
   background: rgb(16, 135, 165) !important;
 }
 .is-primary:focus {

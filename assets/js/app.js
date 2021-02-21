@@ -85,7 +85,6 @@ const showHomeScreen = () => {
     dropdownMenuButton.forEach(function(button) {
         button.addEventListener('click', function() {
             courseType = this.textContent;
-            this.classList.add("active")    
         })
     });
 
@@ -138,10 +137,12 @@ const toggleDarkMode = () => {
     const modalBody = $.querySelectorAll('.modal-card-body');
     const modalFooter = $.querySelectorAll('.modal-card-foot');
     const dropdownMenu = $.querySelector('.dropdown-menu');
+    const dropdownToggle = $.querySelector('.dropdown-toggle');
     const hr = $.querySelectorAll('hr');
     const p = $.querySelectorAll('p');
     const footer = $.querySelector('.footer');
     dropdownMenu.classList.toggle('dropdown-menu-dark')
+    dropdownToggle.classList.toggle('is-dark')
     body.classList.toggle('dark-mode-background-is-active');
     navbar.classList.toggle('dark-mode-background-is-active');
     footer.classList.toggle('dark-mode-background-is-active');
