@@ -20,6 +20,7 @@ const noButton = $.querySelector('.no-button');
 // Form
 const inputFields = $.querySelector('.input-fields');
 const saveStudentButton = $.querySelector('.save-student-button');
+const dropdownMenuButton = $.querySelector('.dropdown-item');
 // Eval page and generate form button
 const evalPage = $.querySelector('.eval-page');
 const openEvalFormButton = $.querySelector('.open-eval-form');
