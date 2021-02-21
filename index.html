@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/bulma.min.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="shortcut icon" href="assets/images/swift-icon.jpg" type="image/x-icon">
@@ -76,9 +77,19 @@
 
     <div class="field">
       <label class="label has-text-weight-semibold">Course Type</label>
-      <div class="control">
-        <input class="shadow-sm course-type input is-rounded" type="text"
-          placeholder="e.g. FSF - Full Stack Flex Web Development(Javascript)" />
+      <div class="dropdown">
+        <button class="btn shadow-sm btn-secondary dropdown-toggle rounded-pill" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+          Dropdown button
+        </button>
+        <ul class="dropdown-menu dropdown-menu-light shadow-sm rounded" aria-labelledby="dropdownMenuButton2">
+          <li><a class="dropdown-item mt-2" href="#">FSF - Full Stack Flex Web Development(Javascript)</a></li>
+          <li><a class="dropdown-item mt-2" href="#">DV - Data Visualization</a></li>
+          <li><a class="dropdown-item mt-2" href="#">Cyber - Cyber Security</a></li>
+          <li><a class="dropdown-item mt-2" href="#">FinTech - Financial Technology</a></li>
+          <li><a class="dropdown-item mt-2" href="#">UXUI - User Experience & User Interfacing</a></li>
+          <li><a class="dropdown-item mt-2" href="#">Digital Marketing</a></li>
+          <li><a class="dropdown-item mt-2" href="#">Tech Project Management</a></li>
+        </ul>
       </div>
     </div>
 
@@ -173,7 +184,7 @@
         <p class="modal-card-title has-text-centered is-size-3 has-text-weight-medium">Tips</p>
         <button class="delete close-info-modal-button" aria-label="close"></button>
       </header>
-      <section class="modal-card-body has-text-centered">
+      <section class="modal-card-body has-text-left">
         <h4 class="is-size-5 has-text-weight-medium">Step 1)</h4>
         <h4>Fill out your full name.</h4>
         <hr>
@@ -185,25 +196,7 @@
           (This can be sent to you by your tutor if you don't remember it.)</h4>
         <hr>
         <h4 class="is-size-5 has-text-weight-medium">Step 4)</h4>
-        <h4>Fill out your course type, <br>
-          This must be written exactly like the examples below. <br>
-          (Simply copy & paste whichever one applies to you.) <br> <br>
-        </h4>
-        <hr>
-        FSF - Full Stack Flex Web Development(Javascript) <br>
-        <hr>
-        DV - Data Visualization <br>
-        <hr>
-        Cyber - Cyber Security <br>
-        <hr>
-        FinTech - Financial Technology <br>
-        <hr>
-        UXUI - User Experience & User Interfacing <br>
-        <hr>
-        Digital Marketing <br>
-        <hr>
-        Tech Project Management
-
+        <h4>Pick your course type from the dropdown menu.</h4>
         <hr>
         <h4 class="is-size-5 has-text-weight-medium">Step 5)</h4>
         <h4>Fill out your tutors name with the last name first.</h4> <br>
@@ -212,7 +205,7 @@
         <h4 class="is-size-5">Smith, John</h4>
         <hr>
         <h4 class="is-size-5 has-text-weight-medium">Step 6)</h4>
-        Simply click on the Generate Eval Form button, whenever you visit <br>
+        Simply click the Save button, whenever you visit <br>
         this app again your info will be saved for next time!
         <hr>
         <h4 class="maybe-try-dark-mode"></h4>
@@ -229,6 +222,8 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
   <script src="assets/js/app.js"></script>
 </body>
 
