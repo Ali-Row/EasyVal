@@ -20,7 +20,7 @@ const noButton = $.querySelector('.no-button');
 // Form
 const inputFields = $.querySelector('.input-fields');
 const saveStudentButton = $.querySelector('.save-student-button');
-const dropdownMenuButton = $.querySelector('.dropdown-item');
+const dropdownMenuButton = $.querySelectorAll('.dropdown-item');
 // Eval page and generate form button
 const evalPage = $.querySelector('.eval-page');
 const openEvalFormButton = $.querySelector('.open-eval-form');
@@ -82,11 +82,17 @@ const showHomeScreen = () => {
     }
 };
 
+    dropdownMenuButton.forEach(function(button) {
+        button.addEventListener('click', function() {
+            courseType = this.textContent;
+            this.classList.add("active")    
+        })
+    });
+
 const getStudentInfo = () => {
     const fullName = $.querySelector('.full-name').value.trim();
     const email = $.querySelector('.email').value.trim();
     const classcode = $.querySelector('.classcode').value.trim();
-    const courseType = $.querySelector('.course-type').value.trim();
     const tutorName = $.querySelector('.tutor-name').value.trim();
 
     const studentObject = new GenerateStudentObject(fullName, email, classcode, courseType, tutorName);
@@ -124,17 +130,19 @@ const addDarkModeClass = (element, className) => {
 };
 
 const toggleDarkMode = () => {
-    const html = $.querySelector('html');
+    const body = $.querySelector('body');
     const navbar = $.querySelector('.navbar');
     const button = $.querySelectorAll('.button');
     const input = $.querySelectorAll('.input');
     const modalHeader = $.querySelectorAll('.modal-card-head');
     const modalBody = $.querySelectorAll('.modal-card-body');
     const modalFooter = $.querySelectorAll('.modal-card-foot');
+    const dropdownMenu = $.querySelector('.dropdown-menu');
     const hr = $.querySelectorAll('hr');
     const p = $.querySelectorAll('p');
     const footer = $.querySelector('.footer');
-    html.classList.toggle('dark-mode-background-is-active');
+    dropdownMenu.classList.toggle('dropdown-menu-dark')
+    body.classList.toggle('dark-mode-background-is-active');
     navbar.classList.toggle('dark-mode-background-is-active');
     footer.classList.toggle('dark-mode-background-is-active');
     addDarkModeClass(button, 'is-dark');
@@ -164,12 +172,10 @@ yesButton.addEventListener('click', () => {
     const fullName = $.querySelector('.full-name');
     const email = $.querySelector('.email');
     const classcode = $.querySelector('.classcode');
-    const courseType = $.querySelector('.course-type');
     const tutorName = $.querySelector('.tutor-name');
     fullName.value = '';
     email.value = '';
     classcode.value = '';
-    courseType.value = '';
     tutorName.value = '';
     deleteFromLocalStorage('student-info');
     hideModal(modal);

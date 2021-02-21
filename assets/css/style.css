@@ -5,6 +5,9 @@
 input {
   border-color: rgb(147, 147, 147) !important;
 }
+.dropdown-toggle {
+  border: none;
+}
 .swifteval-logo {
   max-width: 65px !important;
   max-height: 65px !important;
@@ -37,10 +40,11 @@ input {
   box-shadow: 1px 4px 9px #48484894 !important;
 }
 .is-primary,
-.has-background-primary {
+.has-background-primary,
+.active {
   background: rgb(16, 147, 180) !important;
 }
-.is-primary:hover {
+.is-primary:hover, .active:hover {
   background: rgb(16, 135, 165) !important;
 }
 .is-primary:focus {
@@ -58,7 +62,7 @@ input {
 .w-sm {
   max-width: 25rem !important;
 }
-.has-gradient {
+.has-gradient, .dropdown-toggle {
   background: rgb(206, 56, 133);
   background: -moz-linear-gradient(
     313deg,
@@ -85,7 +89,7 @@ input {
 .dark-mode-text-is-active {
   color: rgb(152, 152, 152) !important;
 }
-.is-dark {
+.is-dark, .dropdown-menu-dark {
   border-color: rgb(38, 38, 38) !important;
   background: rgb(38, 38, 38) !important;
   color: rgb(116, 116, 116) !important;
