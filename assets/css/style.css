@@ -1,3 +1,6 @@
+.active {
+  all: initial;
+}
 .navbar {
   display: flex !important;
   justify-content: space-between !important;

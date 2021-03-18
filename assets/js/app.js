@@ -20,7 +20,7 @@ const noButton = $.querySelector('.no-button');
 // Form
 const inputFields = $.querySelector('.input-fields');
 const saveStudentButton = $.querySelector('.save-student-button');
-const coursetypeMenuButton = $.querySelectorAll('.course-type-item');
+const courseTypeMenuButton = $.querySelectorAll('.course-type-item');
 // Eval page and generate form button
 const evalPage = $.querySelector('.eval-page');
 const openEvalFormButton = $.querySelector('.open-eval-form');
@@ -82,10 +82,14 @@ const showHomeScreen = () => {
     }
 };
 
-    coursetypeMenuButton.forEach(function(button) {         
+const removeActiveClassFromCourse = () => {
+    courseTypeMenuButton.forEach(button => button.classList.remove('active'));
+}
+    courseTypeMenuButton.forEach(button => {         
         button.addEventListener('click', function() {
             courseType = this.textContent;
-            this.classList.toggle('active')
+            removeActiveClassFromCourse();
+            this.classList.add('active');
         })
     });
 
