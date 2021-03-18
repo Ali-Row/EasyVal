@@ -20,7 +20,7 @@ const noButton = $.querySelector('.no-button');
 // Form
 const inputFields = $.querySelector('.input-fields');
 const saveStudentButton = $.querySelector('.save-student-button');
-const dropdownMenuButton = $.querySelectorAll('.dropdown-item');
+const coursetypeMenuButton = $.querySelectorAll('.course-type-item');
 // Eval page and generate form button
 const evalPage = $.querySelector('.eval-page');
 const openEvalFormButton = $.querySelector('.open-eval-form');
@@ -82,9 +82,10 @@ const showHomeScreen = () => {
     }
 };
 
-    dropdownMenuButton.forEach(function(button) {
+    coursetypeMenuButton.forEach(function(button) {         
         button.addEventListener('click', function() {
             courseType = this.textContent;
+            this.classList.toggle('active')
         })
     });
 
@@ -198,12 +199,10 @@ updateInfoButton.addEventListener('click', () => {
     const fullName = $.querySelector('.full-name');
     const email = $.querySelector('.email');
     const classcode = $.querySelector('.classcode');
-    const courseType = $.querySelector('.course-type');
     const tutorName = $.querySelector('.tutor-name');
     fullName.value = readFromLocalStorage('student-info').fullName;
     email.value = readFromLocalStorage('student-info').email;
     classcode.value = readFromLocalStorage('student-info').classcode;
-    courseType.value = readFromLocalStorage('student-info').courseType;
     tutorName.value = readFromLocalStorage('student-info').tutorName;
 });
 
