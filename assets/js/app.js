@@ -86,7 +86,8 @@ const removeActiveClassFromCourse = () => {
     courseTypeMenuButton.forEach(button => button.classList.remove('active'));
 }
     courseTypeMenuButton.forEach(button => {         
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function(e) {
+            e.stopPropagation();
             courseType = this.textContent;
             removeActiveClassFromCourse();
             this.classList.add('active');

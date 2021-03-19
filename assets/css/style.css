@@ -9,8 +9,7 @@ input {
   border: none;
 }
 .swifteval-logo {
-  max-width: 65px !important;
-  max-height: 65px !important;
+  max-height: 4rem !important;
 }
 .fill-form-icon {
   margin-top: -16rem;
@@ -40,17 +39,20 @@ input {
   box-shadow: 1px 4px 9px #48484894 !important;
 }
 .is-primary,
-.has-background-primary,
-.active {
+.has-background-primary {
   background: rgb(16, 147, 180) !important;
 }
-.is-primary:hover,
-.active:hover {
+.is-primary:hover, 
+.active,
+.course-type-item:focus {
   background: rgb(16, 135, 165) !important;
 }
-.is-primary:focus,
-.active:focus {
+.is-primary:focus {
   background: rgb(16, 127, 155) !important;
+}
+.active:hover {
+  color: rgb(255, 255, 255) !important;
+  background: rgb(12, 111, 136) !important;
 }
 .footer-link {
   color: rgb(16, 147, 180) !important;
