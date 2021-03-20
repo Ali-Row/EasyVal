@@ -48,6 +48,25 @@ const showModal = (modalName) => {
     modalName.classList.add('is-active');
 };
 
+window.addEventListener('load', () => {
+    checkNetworkConnection(navigator.onLine);
+  
+    window.addEventListener('online', () => {
+      checkNetworkConnection(true);
+    });
+  
+    window.addEventListener('offline', () => {
+      checkNetworkConnection(false);
+    });
+  });
+
+const checkNetworkConnection = (online) => {
+    const connectionAlert = $.querySelector('.wifi-connection-alert');
+    online ?
+    connectionAlert.classList.add('visually-hidden', 'fadeOutRight') : 
+    connectionAlert.classList.remove('visually-hidden', 'fadeOutRight');
+  }
+
 const saveToLocalStorage = (data) => {
     localStorage.setItem('student-info', JSON.stringify(data));
 };

@@ -2,6 +2,18 @@
   display: flex !important;
   justify-content: space-between !important;
 }
+.connection-alert {
+  border: solid #727272 1px;
+  border-radius: .7rem !important;
+}
+.connection-alert h3 {
+  color: solid rgb(116, 116, 116) 1px;
+  font-size: 1.13rem;
+}
+.wifi-connection-alert {
+  z-index: 1000 !important;
+  position: absolute !important;
+}
 input {
   border-color: rgb(147, 147, 147) !important;
 }
@@ -113,6 +125,12 @@ input {
 @media screen and (max-width: 1250px) {
   .fill-form-icon,
   .opened-tabs {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .wifi-connection-alert {
     display: none;
   }
 }
