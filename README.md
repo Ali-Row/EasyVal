@@ -1,11 +1,11 @@
 # 👋 Hello World! Welcome to SwiftEval
-SwiftEval is a better way for students to fill out the student evaluation forms, as it saves the data for next time, the forms can be filled at the click of a button!
+SwiftEval is a better way for students to fill out the Trilogy Education Services student evaluation form, as the app saves the data for next time, the form can be filled with ease at the click of a button!
 
 Link: https://ali-row.github.io/SwiftEval/
 
 ### Here's how it works:
 
-Once you open up the app you will be presented with slick user interface.
+Once you open up the app you will be presented with a slick user interface.
 
 ![User interface](assets/images/ui.png)
 
@@ -26,23 +26,10 @@ Fill out your classcode.
 (This can be sent to you by your tutor if you don't remember it.)
 
 Step 4) <br>
-Fill out your course type.
-This must be written exactly like the examples below.
-**If you don't fill them out like this it won't autofill this info on the google form!**
-(Simply copy & paste whichever one applies to you.)
-
-<ul>
-    <li> FSF - Full Stack Flex Web Development(Javascript) </li>
-    <li>  DV - Data Visualization </li>
-    <li> Cyber - Cyber Security </li>
-    <li> FinTech - Financial Technology </li>
-    <li> UXUI - User Experience & User Interfacing </li>
-    <li> Digital Marketing </li>
-    <li> Tech Project Management </li>
-</ul>
+Pick your coursetype from the dropdown menu (A brand new feature as of 2021!)
 
 Step 5) <br> 
-Fill out your tutors name with the last name first.
+Fill out your tutors name, starting the last name then the first name.
 **Again this must be written exactly like it is written in the google form.**
 ie. If your tutors name is John Smith, then you would type
 **Smith, John**
